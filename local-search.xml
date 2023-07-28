@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Golang笔记</title>
+    <link href="/20230728/Golang%E7%AC%94%E8%AE%B0/"/>
+    <url>/20230728/Golang%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<p>1.</p><p><strong>数组</strong>是值类型，赋值和传参会复制整个数组，而不是指针。<br><strong>切片</strong>是引用类型，赋值和传参都会复制指针，而不是数据。</p><p>2.<br>函数的参数有两种传递方式，按值传递和按引用传递。按值传递是指在调用函数时将实际参数复制一份传递到函数中，这样在函数中如果对参数进行修改，将不会影响到原来的实际参数。按引用传递是指在调用函数时将实际参数的地址直接传递到函数中，那么在函数中对参数所进行的修改，将影响到原来的实际参数。</p><p>引用类型（slice、map、interface、channel）都默认使用引用传递</p><ol start="3"><li>切片传入方法中，如果方法内部没有对切片进行扩容，那么切片的修改会影响到原切片，如果方法内部对切片进行了扩容，那么切片的修改不会影响到原切片。</li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Golang</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>docker知识整理</title>
     <link href="/20230519/docker%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
     <url>/20230519/docker%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/</url>
@@ -187,9 +206,9 @@
     
     <tags>
       
-      <tag>Vue3</tag>
-      
       <tag>面试</tag>
+      
+      <tag>Vue3</tag>
       
     </tags>
     

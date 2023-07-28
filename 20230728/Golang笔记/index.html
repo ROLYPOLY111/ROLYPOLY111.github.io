@@ -16,25 +16,24 @@
   <meta name="author" content="走花路的长颈鹿">
   <meta name="keywords" content="blog,走花路的长颈鹿,博客">
   
-    <meta name="description" content="构建镜像构建镜像的方式有两种：  docker commit命令 Dockerfile构建文件  docker commit命令三个步骤：  运行容器 修改容器 将容器保存为新的镜像  12345678910# 运行容器docker run -it --name test ubuntu:latest &#x2F;bin&#x2F;bash# 修改容器apt-get updateapt-get install vim#">
+    <meta name="description" content="1. 数组是值类型，赋值和传参会复制整个数组，而不是指针。切片是引用类型，赋值和传参都会复制指针，而不是数据。 2.函数的参数有两种传递方式，按值传递和按引用传递。按值传递是指在调用函数时将实际参数复制一份传递到函数中，这样在函数中如果对参数进行修改，将不会影响到原来的实际参数。按引用传递是指在调用函数时将实际参数的地址直接传递到函数中，那么在函数中对参数所进行的修改，将影响到原来的实际参数。 引">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker知识整理">
-<meta property="og:url" content="https://zouhualu.github.io/20230519/docker%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/index.html">
+<meta property="og:title" content="Golang笔记">
+<meta property="og:url" content="https://zouhualu.github.io/20230728/Golang%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="走花路的长颈鹿">
-<meta property="og:description" content="构建镜像构建镜像的方式有两种：  docker commit命令 Dockerfile构建文件  docker commit命令三个步骤：  运行容器 修改容器 将容器保存为新的镜像  12345678910# 运行容器docker run -it --name test ubuntu:latest &#x2F;bin&#x2F;bash# 修改容器apt-get updateapt-get install vim#">
+<meta property="og:description" content="1. 数组是值类型，赋值和传参会复制整个数组，而不是指针。切片是引用类型，赋值和传参都会复制指针，而不是数据。 2.函数的参数有两种传递方式，按值传递和按引用传递。按值传递是指在调用函数时将实际参数复制一份传递到函数中，这样在函数中如果对参数进行修改，将不会影响到原来的实际参数。按引用传递是指在调用函数时将实际参数的地址直接传递到函数中，那么在函数中对参数所进行的修改，将影响到原来的实际参数。 引">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-19T06:07:22.000Z">
-<meta property="article:modified_time" content="2023-05-19T06:31:00.848Z">
+<meta property="article:published_time" content="2023-07-28T02:14:05.000Z">
+<meta property="article:modified_time" content="2023-07-28T02:30:29.852Z">
 <meta property="article:author" content="走花路的长颈鹿">
-<meta property="article:tag" content="计算机基础">
-<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="Golang">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>docker知识整理 - 走花路的长颈鹿</title>
+  <title>Golang笔记 - 走花路的长颈鹿</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -209,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="docker知识整理"></span>
+            <span id="subtitle" data-typed-text="Golang笔记"></span>
           
         </div>
 
@@ -225,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-19 14:07" pubdate>
-          2023年5月19日 下午
+        <time datetime="2023-07-28 10:14" pubdate>
+          2023年7月28日 上午
         </time>
       </span>
     
@@ -238,7 +237,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1.3k 字
+          308 字
         
       </span>
     
@@ -250,7 +249,7 @@
         
         
           <!-- compatible with older versions-->
-          12 分钟
+          3 分钟
         
       </span>
     
@@ -300,55 +299,17 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">docker知识整理</h1>
+            <h1 style="display: none">Golang笔记</h1>
             
             <div class="markdown-body">
               
-              <h2 id="构建镜像"><a href="#构建镜像" class="headerlink" title="构建镜像"></a>构建镜像</h2><p>构建镜像的方式有两种：</p>
-<ol>
-<li>docker commit命令</li>
-<li>Dockerfile构建文件</li>
+              <p>1.</p>
+<p><strong>数组</strong>是值类型，赋值和传参会复制整个数组，而不是指针。<br><strong>切片</strong>是引用类型，赋值和传参都会复制指针，而不是数据。</p>
+<p>2.<br>函数的参数有两种传递方式，按值传递和按引用传递。按值传递是指在调用函数时将实际参数复制一份传递到函数中，这样在函数中如果对参数进行修改，将不会影响到原来的实际参数。按引用传递是指在调用函数时将实际参数的地址直接传递到函数中，那么在函数中对参数所进行的修改，将影响到原来的实际参数。</p>
+<p>引用类型（slice、map、interface、channel）都默认使用引用传递</p>
+<ol start="3">
+<li>切片传入方法中，如果方法内部没有对切片进行扩容，那么切片的修改会影响到原切片，如果方法内部对切片进行了扩容，那么切片的修改不会影响到原切片。</li>
 </ol>
-<h3 id="docker-commit命令"><a href="#docker-commit命令" class="headerlink" title="docker commit命令"></a>docker commit命令</h3><p>三个步骤：</p>
-<ul>
-<li>运行容器</li>
-<li>修改容器</li>
-<li>将容器保存为新的镜像</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 运行容器</span><br>docker run -it --name <span class="hljs-built_in">test</span> ubuntu:latest /bin/bash<br><br><span class="hljs-comment"># 修改容器</span><br>apt-get update<br>apt-get install vim<br><br><span class="hljs-comment"># 将容器保存为新的镜像</span><br>docker commit -m=<span class="hljs-string">&quot;add vim&quot;</span> -a=<span class="hljs-string">&quot;test&quot;</span> <span class="hljs-built_in">test</span> <span class="hljs-built_in">test</span>:1.0<br><br></code></pre></td></tr></table></figure>
-
-<p>此时执行docker images命令，可以看到新的镜像已经生成。</p>
-<p><strong>Docker不建议用户通过这种方式构建镜像。容易出错，效率低且 可重复性低，而且使用者并不知道镜像是如何创建出来的，里面是否有恶意程序</strong></p>
-<h3 id="Dockerfile构建文件"><a href="#Dockerfile构建文件" class="headerlink" title="Dockerfile构建文件"></a>Dockerfile构建文件</h3><p>Dockerfile是一个文本文件，其内包含了一条条的指令(Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。</p>
-<ol>
-<li><p>新建一个Dockerfile文件</p>
-</li>
-<li><p>编写Dockerfile文件，输入如下内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">FROM ubuntu:latest<br>RUN apt-get update<br>RUN apt-get install -y vim<br></code></pre></td></tr></table></figure></li>
-<li><p>执行docker build命令，构建镜像</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker build -t <span class="hljs-built_in">test</span>:1.0 .<br></code></pre></td></tr></table></figure></li>
-</ol>
-<p><code>-t</code>将镜像命名为test:1.0，<code>.</code>表示Dockerfile文件所在的路径，表明当前目录，会自动查找当前目录下的Dockerfile文件。<br>我们也可以通过-f指定Dockerfile文件的路径。</p>
-<h4 id="Dockerfile指令"><a href="#Dockerfile指令" class="headerlink" title="Dockerfile指令"></a>Dockerfile指令</h4><ul>
-<li>FROM：指定基础镜像，必须为第一条指令</li>
-<li>MAINTAINER：指定镜像的作者和联系方式</li>
-<li>RUN：构建镜像时需要运行的命令</li>
-<li>EXPOSE：指定容器运行时监听的端口</li>
-<li>WORKDIR：指定容器中的工作目录</li>
-<li>ENV：用来在构建镜像过程中设置环境变量</li>
-<li>ADD：将宿主机目录下的文件拷贝到镜像中</li>
-<li>COPY：将宿主机目录下的文件拷贝到镜像中</li>
-<li>VOLUME：用于指定持久化目录，或者挂载目录</li>
-<li>CMD：指定容器启动时要运行的命令，每个Dockerfile只能有一条CMD命令，多条则只有最后一条生效</li>
-<li>ENTRYPOINT：指定容器启动时要运行的命令，每个Dockerfile只能有一条ENTRYPOINT命令，多条则只有最后一条生效</li>
-<li>ONBUILD：当构建一个被继承的Dockerfile时运行命令，父镜像在被子继承后父镜像的onbuild被触发</li>
-<li>USER：指定运行容器时的用户名或UID，后续的RUN、CMD、ENTRYPOINT都会以指定用户运行</li>
-<li>LABEL：为镜像添加元数据，元数据可以被Docker Hub等平台识别</li>
-<li>ARG：构建参数，构建时使用–build-arg <varname>=<value>可以覆盖默认值</li>
-<li>SHELL：指定SHELL类型，SHELL [“executable”, “parameters”]，SHELL /bin/bash</li>
-<li>STOPSIGNAL：指定接收到什么信号时停止容器运行，STOPSIGNAL signal</li>
-<li>HEALTHCHECK：健康检查，用于检查应用的健康状态，包括：检查容器是否存活、检查容器是否能够响应请求、检查容器中的应用是否正常运行等</li>
-</ul>
 
               
             </div>
@@ -360,9 +321,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">#计算机基础</a>
-      
-        <a href="/tags/Docker/">#Docker</a>
+        <a href="/tags/Golang/">#Golang</a>
       
     </div>
   
@@ -374,8 +333,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>docker知识整理</div>
-      <div>https://zouhualu.github.io/20230519/docker知识整理/</div>
+      <div>Golang笔记</div>
+      <div>https://zouhualu.github.io/20230728/Golang笔记/</div>
     </div>
     <div class="license-meta">
       
@@ -387,7 +346,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年5月19日</div>
+          <div>2023年7月28日</div>
         </div>
       
       
@@ -417,18 +376,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/20230728/Golang%E7%AC%94%E8%AE%B0/" title="Golang笔记">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Golang笔记</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/20230420/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/" title="前端工程化">
-                        <span class="hidden-mobile">前端工程化</span>
+                      <a href="/20230519/docker%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" title="docker知识整理">
+                        <span class="hidden-mobile">docker知识整理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
