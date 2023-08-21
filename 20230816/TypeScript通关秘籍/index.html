@@ -24,7 +24,7 @@
 <meta property="og:description" content="TS类型系统支持哪些类型和类型运算TS中的类型静态类型系统的目的是把类型检查从运行时提前到编译时。 1234    基础类型：number、boolean、string、object、symbol、undefined、null包装类型：Number、Boolean、String、Object、Symbol复合类型：class、Array新增了三种类型：Tuple（元组）、Enum（枚举）、Inte">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-16T02:26:54.000Z">
-<meta property="article:modified_time" content="2023-08-21T06:51:53.646Z">
+<meta property="article:modified_time" content="2023-08-21T08:27:32.868Z">
 <meta property="article:author" content="走花路的长颈鹿">
 <meta property="article:tag" content="TypeScript">
 <meta name="twitter:card" content="summary_large_image">
@@ -237,7 +237,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          6.2k 字
+          6.4k 字
         
       </span>
     
@@ -249,7 +249,7 @@
         
         
           <!-- compatible with older versions-->
-          52 分钟
+          54 分钟
         
       </span>
     
@@ -415,8 +415,11 @@
 <p>索引类型可以添加修饰符 readonly（只读）、?（可选）:</p>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">type</span> obj = &#123;<br>    <span class="hljs-keyword">readonly</span> name: <span class="hljs-built_in">string</span>;<br>    age?: <span class="hljs-built_in">number</span>;<br>    gender: <span class="hljs-built_in">boolean</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>对它的修改和构造新类型涉及到了映射类型的语法：</p>
+<h3 id="Mapping"><a href="#Mapping" class="headerlink" title="Mapping"></a>Mapping</h3><p>对它的修改和构造新类型涉及到了映射类型的语法：</p>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">type</span> Mapping&lt;Obj <span class="hljs-keyword">extends</span> <span class="hljs-built_in">object</span>&gt; = &#123; <br>    [Key <span class="hljs-keyword">in</span> keyof Obj]: Obj[Key]<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>用 <code>keyof</code> 取出 <code>Obj</code> 的索引，作为新的索引类型的索引，也就是 <code>Key in keyof Obj</code>。</p>
+<h3 id="UppercaseKey"><a href="#UppercaseKey" class="headerlink" title="UppercaseKey"></a>UppercaseKey</h3><p>除了可以对 <code>Value</code> 做修改，也可以对 <code>Key</code> 做修改，使用 <code>as</code>，这叫做<strong>重映射</strong>：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-comment">// 把索引类型的key变成大写</span><br><span class="hljs-keyword">type</span> UppercaseKey&lt;Obj <span class="hljs-keyword">extends</span> <span class="hljs-built_in">object</span>&gt; = &#123; <br>    [Key <span class="hljs-keyword">in</span> keyof Obj <span class="hljs-keyword">as</span> Uppercase&lt;Key &amp; <span class="hljs-built_in">string</span>&gt;]: Obj[Key]<br>&#125;<br></code></pre></td></tr></table></figure>
 
               
             </div>
