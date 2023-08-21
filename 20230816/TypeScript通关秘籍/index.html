@@ -24,7 +24,7 @@
 <meta property="og:description" content="TS类型系统支持哪些类型和类型运算TS中的类型静态类型系统的目的是把类型检查从运行时提前到编译时。 1234    基础类型：number、boolean、string、object、symbol、undefined、null包装类型：Number、Boolean、String、Object、Symbol复合类型：class、Array新增了三种类型：Tuple（元组）、Enum（枚举）、Inte">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-16T02:26:54.000Z">
-<meta property="article:modified_time" content="2023-08-21T08:27:32.868Z">
+<meta property="article:modified_time" content="2023-08-21T08:53:40.963Z">
 <meta property="article:author" content="走花路的长颈鹿">
 <meta property="article:tag" content="TypeScript">
 <meta name="twitter:card" content="summary_large_image">
@@ -237,7 +237,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          6.4k 字
+          7k 字
         
       </span>
     
@@ -249,7 +249,7 @@
         
         
           <!-- compatible with older versions-->
-          54 分钟
+          59 分钟
         
       </span>
     
@@ -420,6 +420,16 @@
 <p>用 <code>keyof</code> 取出 <code>Obj</code> 的索引，作为新的索引类型的索引，也就是 <code>Key in keyof Obj</code>。</p>
 <h3 id="UppercaseKey"><a href="#UppercaseKey" class="headerlink" title="UppercaseKey"></a>UppercaseKey</h3><p>除了可以对 <code>Value</code> 做修改，也可以对 <code>Key</code> 做修改，使用 <code>as</code>，这叫做<strong>重映射</strong>：</p>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-comment">// 把索引类型的key变成大写</span><br><span class="hljs-keyword">type</span> UppercaseKey&lt;Obj <span class="hljs-keyword">extends</span> <span class="hljs-built_in">object</span>&gt; = &#123; <br>    [Key <span class="hljs-keyword">in</span> keyof Obj <span class="hljs-keyword">as</span> Uppercase&lt;Key &amp; <span class="hljs-built_in">string</span>&gt;]: Obj[Key]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h3><p>TypeScript 提供了内置的高级类型 <code>Record</code> 来创建索引类型：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">type</span> Record&lt;K <span class="hljs-keyword">extends</span> <span class="hljs-built_in">string</span> | <span class="hljs-built_in">number</span> | symbol, T&gt; = &#123; [P <span class="hljs-keyword">in</span> K]: T; &#125;<br></code></pre></td></tr></table></figure>
+<p>指定索引和值的类型分别为 <code>K</code> 和 <code>T</code>，就可以创建一个对应的索引类型。</p>
+<p>上面的索引类型的约束我们用的 object，其实更语义化一点我推荐用 Record&lt;string, any&gt;:</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">type</span> UppercaseKey&lt;Obj <span class="hljs-keyword">extends</span> Record&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">any</span>&gt;&gt; = &#123; <br>    [Key <span class="hljs-keyword">in</span> keyof Obj <span class="hljs-keyword">as</span> Uppercase&lt;Key &amp; <span class="hljs-built_in">string</span>&gt;]: Obj[Key]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="去掉readonly修饰"><a href="#去掉readonly修饰" class="headerlink" title="去掉readonly修饰"></a>去掉readonly修饰</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">type</span> RemoveReadonly&lt;Obj <span class="hljs-keyword">extends</span> Record&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">any</span>&gt;&gt; = &#123; <br>    -<span class="hljs-keyword">readonly</span> [Key <span class="hljs-keyword">in</span> keyof Obj]: Obj[Key]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="去掉可选修饰符"><a href="#去掉可选修饰符" class="headerlink" title="去掉可选修饰符"></a>去掉可选修饰符</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">type</span> RemoveOptional&lt;Obj <span class="hljs-keyword">extends</span> Record&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">any</span>&gt;&gt; = &#123; <br>    [Key <span class="hljs-keyword">in</span> keyof Obj]-?: Obj[Key]<br>&#125;<br></code></pre></td></tr></table></figure>
 
               
             </div>
