@@ -13,21 +13,21 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="走花路的长颈鹿">
-  <meta name="keywords" content="blog,走花路的长颈鹿,博客">
+  <meta name="author" content="花鹿">
+  <meta name="keywords" content="blog,走花路的长颈鹿,博客,走花鹿，花鹿">
   
     <meta name="description" content="这一篇讲的也特别清楚，建议看看：这一次，彻底弄懂 JavaScript 执行机制 一、是什么JavaScript 在设计之初便是单线程，即指程序运行时，只有一个线程存在，同一时间只能做一件事 为什么要这么设计，跟JavaScript的应用场景有关 JavaScript 初期作为一门浏览器脚本语言，通常用于操作 DOM ，如果是多线程，一个线程进行了删除 DOM ，另一个添加 DOM，此时浏览器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript事件循环">
 <meta property="og:url" content="https://zouhualu.github.io/20211014/JavaScript%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/index.html">
-<meta property="og:site_name" content="走花路的长颈鹿">
+<meta property="og:site_name" content="花鹿">
 <meta property="og:description" content="这一篇讲的也特别清楚，建议看看：这一次，彻底弄懂 JavaScript 执行机制 一、是什么JavaScript 在设计之初便是单线程，即指程序运行时，只有一个线程存在，同一时间只能做一件事 为什么要这么设计，跟JavaScript的应用场景有关 JavaScript 初期作为一门浏览器脚本语言，通常用于操作 DOM ，如果是多线程，一个线程进行了删除 DOM ，另一个添加 DOM，此时浏览器">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13931286-a4cefb0d8aa74774?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/gH31uF9VIibSNwS2EBDtHnxMysjAib2yvIh75NUHZic4J4n5mPSe5jcMcWtsO0LuhRDuqdHVWicqejmPAI8NLLjuKw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
 <meta property="article:published_time" content="2021-10-14T03:17:45.000Z">
 <meta property="article:modified_time" content="2022-11-09T03:05:32.867Z">
-<meta property="article:author" content="走花路的长颈鹿">
+<meta property="article:author" content="花鹿">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary_large_image">
@@ -37,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>JavaScript事件循环 - 走花路的长颈鹿</title>
+  <title>JavaScript事件循环 - 花鹿</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -131,7 +131,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                全部
               </a>
             </li>
           
@@ -222,7 +222,7 @@
     
       <span class="post-meta mr-2">
         <i class="iconfont icon-author" aria-hidden="true"></i>
-        走花路的长颈鹿
+        花鹿
       </span>
     
     
@@ -449,7 +449,7 @@
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>走花路的长颈鹿</div>
+          <div>花鹿</div>
         </div>
       
       
