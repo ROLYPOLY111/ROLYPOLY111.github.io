@@ -16,15 +16,15 @@
   <meta name="author" content="花鹿">
   <meta name="keywords" content="blog,走花路的长颈鹿,博客,走花鹿，花鹿">
   
-    <meta name="description" content="1. 什么是JSX？">
+    <meta name="description" content="1. 什么是JSX？JSX是JavaScript的扩展标记语言，它允许在JavaScript中嵌入HTML代码。JSX可以让你在JavaScript代码中编写类似于HTML的代码，从而使你的代码更加简洁和易读。 例如，在React库中，你可以使用JSX编写组件的HTML结构。 1&lt;h1 className&#x3D;&quot;title&quot; style&#x3D;&amp;#123;&amp;#123;color:&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2023版|react知识记录">
 <meta property="og:url" content="https://zouhualu.github.io/20231009/2023%E7%89%88-react%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="花鹿">
-<meta property="og:description" content="1. 什么是JSX？">
+<meta property="og:description" content="1. 什么是JSX？JSX是JavaScript的扩展标记语言，它允许在JavaScript中嵌入HTML代码。JSX可以让你在JavaScript代码中编写类似于HTML的代码，从而使你的代码更加简洁和易读。 例如，在React库中，你可以使用JSX编写组件的HTML结构。 1&lt;h1 className&#x3D;&quot;title&quot; style&#x3D;&amp;#123;&amp;#123;color:&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-09T07:54:48.000Z">
-<meta property="article:modified_time" content="2023-10-09T08:10:12.589Z">
+<meta property="article:modified_time" content="2023-10-09T09:46:19.980Z">
 <meta property="article:author" content="花鹿">
 <meta property="article:tag" content="面试">
 <meta property="article:tag" content="React">
@@ -238,7 +238,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          9 字
+          564 字
         
       </span>
     
@@ -250,7 +250,7 @@
         
         
           <!-- compatible with older versions-->
-          1 分钟
+          5 分钟
         
       </span>
     
@@ -304,7 +304,17 @@
             
             <div class="markdown-body">
               
-              <h2 id="1-什么是JSX？"><a href="#1-什么是JSX？" class="headerlink" title="1. 什么是JSX？"></a>1. 什么是JSX？</h2>
+              <h2 id="1-什么是JSX？"><a href="#1-什么是JSX？" class="headerlink" title="1. 什么是JSX？"></a>1. 什么是<code>JSX</code>？</h2><p><code>JSX</code>是JavaScript的扩展标记语言，它允许在JavaScript中嵌入HTML代码。<code>JSX</code>可以让你在JavaScript代码中编写类似于HTML的代码，从而使你的代码更加简洁和易读。</p>
+<p>例如，在<code>React</code>库中，你可以使用<code>JSX</code>编写组件的<code>HTML</code>结构。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jsx">&lt;h1 className=<span class="hljs-string">&quot;title&quot;</span> style=&#123;&#123;<span class="hljs-attr">color</span>:<span class="hljs-string">&#x27;red&#x27;</span>&#125;&#125;&gt;hello&lt;/h1&gt;<br></code></pre></td></tr></table></figure>
+
+<p>经过<code>babel</code>编译后，会变成</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">React.createElement(<span class="hljs-string">&#x27;h1&#x27;</span>, &#123;<span class="hljs-attr">className</span>: <span class="hljs-string">&#x27;title&#x27;</span>, <span class="hljs-attr">style</span>: &#123;<span class="hljs-attr">color</span>:<span class="hljs-string">&#x27;red&#x27;</span>&#125;&#125;, <span class="hljs-string">&#x27;hello&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p><code>createElement</code>执行后，会变成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs json5">&#123;<br>  type:&#x27;h1&#x27;,<br>  props:&#123;<br>    className: &quot;title&quot;,<br>    style: &#123;<br>      color: &#x27;red&#x27;<br>    &#125;<br>  &#125;,<br>  children:&quot;hello&quot;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
               
             </div>
             <hr/>
