@@ -102,27 +102,6 @@
   
   
   <entry>
-    <title>docker知识整理</title>
-    <link href="/20230519/docker%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
-    <url>/20230519/docker%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/</url>
-    
-    <content type="html"><![CDATA[<h2 id="构建镜像"><a href="#构建镜像" class="headerlink" title="构建镜像"></a>构建镜像</h2><p>构建镜像的方式有两种：</p><ol><li>docker commit命令</li><li>Dockerfile构建文件</li></ol><h3 id="docker-commit命令"><a href="#docker-commit命令" class="headerlink" title="docker commit命令"></a>docker commit命令</h3><p>三个步骤：</p><ul><li>运行容器</li><li>修改容器</li><li>将容器保存为新的镜像</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 运行容器</span><br>docker run -it --name <span class="hljs-built_in">test</span> ubuntu:latest /bin/bash<br><br><span class="hljs-comment"># 修改容器</span><br>apt-get update<br>apt-get install vim<br><br><span class="hljs-comment"># 将容器保存为新的镜像</span><br>docker commit -m=<span class="hljs-string">&quot;add vim&quot;</span> -a=<span class="hljs-string">&quot;test&quot;</span> <span class="hljs-built_in">test</span> <span class="hljs-built_in">test</span>:1.0<br><br></code></pre></td></tr></table></figure><p>此时执行docker images命令，可以看到新的镜像已经生成。</p><p><strong>Docker不建议用户通过这种方式构建镜像。容易出错，效率低且 可重复性低，而且使用者并不知道镜像是如何创建出来的，里面是否有恶意程序</strong></p><h3 id="Dockerfile构建文件"><a href="#Dockerfile构建文件" class="headerlink" title="Dockerfile构建文件"></a>Dockerfile构建文件</h3><p>Dockerfile是一个文本文件，其内包含了一条条的指令(Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。</p><ol><li><p>新建一个Dockerfile文件</p></li><li><p>编写Dockerfile文件，输入如下内容</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">FROM ubuntu:latest<br>RUN apt-get update<br>RUN apt-get install -y vim<br></code></pre></td></tr></table></figure></li><li><p>执行docker build命令，构建镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker build -t <span class="hljs-built_in">test</span>:1.0 .<br></code></pre></td></tr></table></figure></li></ol><p><code>-t</code>将镜像命名为test:1.0，<code>.</code>表示Dockerfile文件所在的路径，表明当前目录，会自动查找当前目录下的Dockerfile文件。<br>我们也可以通过-f指定Dockerfile文件的路径。</p><h4 id="Dockerfile指令"><a href="#Dockerfile指令" class="headerlink" title="Dockerfile指令"></a>Dockerfile指令</h4><ul><li>FROM：指定基础镜像，必须为第一条指令</li><li>MAINTAINER：指定镜像的作者和联系方式</li><li>RUN：构建镜像时需要运行的命令</li><li>EXPOSE：指定容器运行时监听的端口</li><li>WORKDIR：指定容器中的工作目录</li><li>ENV：用来在构建镜像过程中设置环境变量</li><li>ADD：将宿主机目录下的文件拷贝到镜像中</li><li>COPY：将宿主机目录下的文件拷贝到镜像中</li><li>VOLUME：用于指定持久化目录，或者挂载目录</li><li>CMD：指定容器启动时要运行的命令，每个Dockerfile只能有一条CMD命令，多条则只有最后一条生效</li><li>ENTRYPOINT：指定容器启动时要运行的命令，每个Dockerfile只能有一条ENTRYPOINT命令，多条则只有最后一条生效</li><li>ONBUILD：当构建一个被继承的Dockerfile时运行命令，父镜像在被子继承后父镜像的onbuild被触发</li><li>USER：指定运行容器时的用户名或UID，后续的RUN、CMD、ENTRYPOINT都会以指定用户运行</li><li>LABEL：为镜像添加元数据，元数据可以被Docker Hub等平台识别</li><li>ARG：构建参数，构建时使用–build-arg <varname>=<value>可以覆盖默认值</li><li>SHELL：指定SHELL类型，SHELL [“executable”, “parameters”]，SHELL /bin/bash</li><li>STOPSIGNAL：指定接收到什么信号时停止容器运行，STOPSIGNAL signal</li><li>HEALTHCHECK：健康检查，用于检查应用的健康状态，包括：检查容器是否存活、检查容器是否能够响应请求、检查容器中的应用是否正常运行等</li></ul>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>计算机基础</tag>
-      
-      <tag>Docker</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>前端工程化</title>
     <link href="/20230420/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     <url>/20230420/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/</url>
