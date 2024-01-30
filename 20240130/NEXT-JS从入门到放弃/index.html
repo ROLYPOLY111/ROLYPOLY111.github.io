@@ -23,16 +23,16 @@
 <meta property="og:site_name" content="花鹿">
 <meta property="og:description" content="包学包会！看完你也会 NEXT.JS 官方英文文档：https:&#x2F;&#x2F;nextjs.org&#x2F; 中文文档不建议看，落后太多！  1. 初始篇1.1 创建项目使用 create-next-app 脚手架 1npx create-next-app  如果你不使用 npx，也支持使用 yarn、pnpm、bunx 12345yarn create next-apppnpm create next-appb">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/image.png">
-<meta property="og:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%80.png">
-<meta property="og:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%802.png">
+<meta property="og:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/image.png">
+<meta property="og:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%80.png">
+<meta property="og:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%802.png">
 <meta property="article:published_time" content="2024-01-30T06:39:50.000Z">
-<meta property="article:modified_time" content="2024-01-30T08:30:40.448Z">
+<meta property="article:modified_time" content="2024-01-30T08:39:36.828Z">
 <meta property="article:author" content="花鹿">
 <meta property="article:tag" content="React">
 <meta property="article:tag" content="Next.js">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/image.png">
+<meta name="twitter:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/image.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -329,7 +329,7 @@
 <h2 id="2-App-Router"><a href="#2-App-Router" class="headerlink" title="2. App Router"></a>2. App Router</h2><h3 id="2-1-定义路由"><a href="#2-1-定义路由" class="headerlink" title="2.1 定义路由"></a>2.1 定义路由</h3><p>文件夹被用来定义路由。</p>
 <p><code>app/dashboard/settings</code>目录对应的路由地址就是 <code>/dashboard/settings</code></p>
 <h3 id="2-2-定义页面（Pages）"><a href="#2-2-定义页面（Pages）" class="headerlink" title="2.2 定义页面（Pages）"></a>2.2 定义页面（Pages）</h3><p>你需要创建一个特殊的名为 <code>page.js</code> 的文件，这是一种约定和规范</p>
-<p><img src="./2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/image.png" srcset="/img/loading.gif" lazyload alt="目录结构"></p>
+<p><img src="/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/image.png" srcset="/img/loading.gif" lazyload alt="目录结构"></p>
 <p>在上图这个例子中:</p>
 <ul>
 <li>app/page.js 对应路由 /</li>
@@ -342,12 +342,12 @@
 
 <h3 id="2-3-定义布局（Layouts）"><a href="#2-3-定义布局（Layouts）" class="headerlink" title="2.3 定义布局（Layouts）"></a>2.3 定义布局（Layouts）</h3><p>布局是指<strong>多个页面共享的 UI。在导航的时候，布局会保留状态，保持可交互性并且不会重新渲染</strong>，比如用来实现后台管理系统的侧边导航栏。</p>
 <p>定义一个布局，你需要新建一个名为 <code>layout.js</code>的文件，该文件默认导出一个 React 组件，该组件应接收一个 <code>children</code> prop，<code>chidren</code> 表示子布局（如果有的话）或者子页面。</p>
-<p><img src="./2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%80.png" srcset="/img/loading.gif" lazyload alt="目录结构"></p>
+<p><img src="/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%80.png" srcset="/img/loading.gif" lazyload alt="目录结构"></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// app/dashboard/layout.js</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">DashboardLayout</span>(<span class="hljs-params">&#123;</span></span><br><span class="hljs-params"><span class="hljs-function">  children,</span></span><br><span class="hljs-params"><span class="hljs-function">&#125;</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span></span><br><span class="xml">      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>nav<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></span><br><span class="xml">      &#123;children&#125;</span><br><span class="xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span><br>  )<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// app/dashboard/page.js</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Page</span>(<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, Dashboard!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="./2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%802.png" srcset="/img/loading.gif" lazyload alt="显示"></p>
+<p><img src="/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%802.png" srcset="/img/loading.gif" lazyload alt="显示"></p>
 <p>你可以发现：同一文件夹下如果有 layout.js 和 page.js，page 会作为 children 参数传入 layout。换句话说，layout 会包裹同层级的 page。</p>
 <h4 id="根布局（Root-Layout）"><a href="#根布局（Root-Layout）" class="headerlink" title="根布局（Root Layout）"></a>根布局（Root Layout）</h4><p>布局支持嵌套，最顶层的布局我们称之为根布局（Root Layout），也就是 <code>app/layout.js</code>。它会应用于所有的路由。除此之外，这个布局还有点特殊。</p>
 <p>使用 <code>create-next-app</code> 默认创建的 <code>layout.js</code> 代码如下：</p>
