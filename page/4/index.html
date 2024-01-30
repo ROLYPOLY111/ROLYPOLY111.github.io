@@ -63,7 +63,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zouhualu.github.io","root":"/","version":"1.9.1","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"zouhualu.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -72,6 +72,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -105,9 +107,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                主页
+                <span>主页</span>
               </a>
             </li>
           
@@ -117,9 +119,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                全部
+                <span>全部</span>
               </a>
             </li>
           
@@ -129,9 +131,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -141,9 +143,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -153,9 +155,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -165,9 +167,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -175,15 +177,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -236,12 +239,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20210923/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97%E7%9A%84%E7%90%86%E8%A7%A3%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/" target="_self">
           栈与队列的理解以及应用场景
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20210923/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97%E7%9A%84%E7%90%86%E8%A7%A3%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/" target="_self">
@@ -299,12 +302,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20210915/vue3%E6%96%87%E6%A1%A3%E8%AE%B0%E5%BD%95/" target="_self">
           通读vue3文档记录
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20210915/vue3%E6%96%87%E6%A1%A3%E8%AE%B0%E5%BD%95/" target="_self">
@@ -360,12 +363,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20210912/web%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98/" target="_self">
           web设计模式解析与实战（一）
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20210912/web%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98/" target="_self">
@@ -421,17 +424,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20210910/TypeScript%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3/" target="_self">
           TypeScript中函数的理解
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20210910/TypeScript%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3/" target="_self">
         <div>
-          使用方式和JavaScript使用方式类似，可以通过funciton关键字、箭头函数等形式去定义，例如下面一个简单的加法函数： 1const add &#x3D; (a:number,b:number)&#x3D;&gt; a+b 上述只定义了函数的两个参数类型，这个时候整个函数虽然没有被显式定义，但是实际上TypeScript 编译器是能够通过类型推断到这个函数的类型，如下图所示：当鼠标放置在第三行 add 函数名
+          使用方式和JavaScript使用方式类似，可以通过funciton关键字、箭头函数等形式去定义，例如下面一个简单的加法函数： 1const add = (a:number,b:number)=&gt; a+b 上述只定义了函数的两个参数类型，这个时候整个函数虽然没有被显式定义，但是实际上TypeScript 编译器是能够通过类型推断到这个函数的类型，如下图所示：当鼠标放置在第三行 add 函数名
         </div>
       </a>
 
@@ -482,12 +485,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20210906/TypeScript%E4%B8%AD%E7%B1%BB%E7%9A%84%E7%90%86%E8%A7%A3/" target="_self">
           TypeScript中类的理解
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20210906/TypeScript%E4%B8%AD%E7%B1%BB%E7%9A%84%E7%90%86%E8%A7%A3/" target="_self">
@@ -543,17 +546,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20210701/export%E4%B8%8Eexport-default%E7%9A%84%E5%8C%BA%E5%88%AB/" target="_self">
           export与export default的区别
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20210701/export%E4%B8%8Eexport-default%E7%9A%84%E5%8C%BA%E5%88%AB/" target="_self">
         <div>
-          node中导入模块：var 名称 &#x3D; require(‘模块标识符’) node中向外暴露成员的形式：module.exports &#x3D; {} 在ES6中，也通过规范的形式，规定了ES6中如何导入和导出模块 ES6中导入模块，使用 import 模块名称 from ‘模块标识符’    import ‘表示路径’ import * from * 是ES6中导入模块的方式 在ES6中，使用export
+          node中导入模块：var 名称 = require(‘模块标识符’) node中向外暴露成员的形式：module.exports = {} 在ES6中，也通过规范的形式，规定了ES6中如何导入和导出模块 ES6中导入模块，使用 import 模块名称 from ‘模块标识符’    import ‘表示路径’ import * from * 是ES6中导入模块的方式 在ES6中，使用export
         </div>
       </a>
 
@@ -606,17 +609,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20210619/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_self">
           new操作符的实现
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20210619/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_self">
         <div>
-          JavaScript中的new操作符的原理例子123456function Person (name, age) &amp;#123; this.name &#x3D; name this.age &#x3D; age&amp;#125;const person1 &#x3D; new Person(&amp;#x27;走花路的长颈鹿&amp;#x27;, 26)console.log(person1) &#x2F;&#x2F;Person&amp;#123;name:&amp;#x27;
+          JavaScript中的new操作符的原理例子123456function Person (name, age) &#123; this.name = name this.age = age&#125;const person1 = new Person(&#x27;走花路的长颈鹿&#x27;, 26)console.log(person1) //Person&#123;name:&#x27;
         </div>
       </a>
 
@@ -669,17 +672,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20210618/%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%B8%8Econstructor/" target="_self">
           原型与原型链与constructor
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20210618/%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%B8%8Econstructor/" target="_self">
         <div>
-          原型与原型链与constructor本文参考自：https:&#x2F;&#x2F;blog.csdn.net&#x2F;cc18868876837&#x2F;article&#x2F;details&#x2F;81211729 先来个总结：  我们需要牢记两点：①__proto__和constructor属性是对象所独有的；② prototype属性是函数所独有的，因为函数也是一种对象，所以函数也拥有__proto__和constructor属性。
+          原型与原型链与constructor本文参考自：https://blog.csdn.net/cc18868876837/article/details/81211729 先来个总结：  我们需要牢记两点：①__proto__和constructor属性是对象所独有的；② prototype属性是函数所独有的，因为函数也是一种对象，所以函数也拥有__proto__和constructor属性。
         </div>
       </a>
 
@@ -732,12 +735,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20210618/Vue%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/" target="_self">
           Vue自定义全局组件
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20210618/Vue%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/" target="_self">
@@ -793,12 +796,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20210617/JavaScript%E4%B8%AD%E7%9A%84%E5%A0%86%E6%A0%88%E4%BB%A5%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
           JavaScript中的堆栈以及数据类型
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20210617/JavaScript%E4%B8%AD%E7%9A%84%E5%A0%86%E6%A0%88%E4%BB%A5%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
@@ -972,8 +975,6 @@
       
     })(window, document);
   </script>
-
-
 
 
 

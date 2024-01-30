@@ -63,7 +63,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zouhualu.github.io","root":"/","version":"1.9.1","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"zouhualu.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -72,6 +72,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -105,9 +107,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                主页
+                <span>主页</span>
               </a>
             </li>
           
@@ -117,9 +119,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                全部
+                <span>全部</span>
               </a>
             </li>
           
@@ -129,9 +131,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -141,9 +143,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -153,9 +155,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -165,9 +167,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -175,15 +177,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -236,19 +239,19 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
           <i class="index-pin iconfont icon-top" title="Pin on top"></i>
         
         <a href="/20210907/about-me/" target="_self">
           Hi there!
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20210907/about-me/" target="_self">
         <div>
-          逆水行舟，不进则退   我的 github 仓库：https:&#x2F;&#x2F;github.com&#x2F;zouHuaLu
+          逆水行舟，不进则退   我的 github 仓库：https://github.com/zouHuaLu
         </div>
       </a>
 
@@ -299,17 +302,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/" target="_self">
           NEXT.JS从入门到放弃
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/" target="_self">
         <div>
-          包学包会！看完你也会 NEXT.JS 官方英文文档：https:&#x2F;&#x2F;nextjs.org&#x2F; 中文文档不建议看，落后太多！  1. 初始篇1.1 创建项目使用 create-next-app 脚手架 1npx create-next-app  如果你不使用 npx，也支持使用 yarn、pnpm、bunx 12345yarn create next-apppnpm create next-appb
+          包学包会！看完你也会 NEXT.JS 官方英文文档：https://nextjs.org/ 中文文档不建议看，落后太多！  1. 初始篇1.1 创建项目使用 create-next-app 脚手架 1npx create-next-app  如果你不使用 npx，也支持使用 yarn、pnpm、bunx 12345yarn create next-apppnpm create next-appb
         </div>
       </a>
 
@@ -362,12 +365,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20231010/2023%E7%89%88Nodejs%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95%EF%BC%88%E6%9B%B4%E6%96%B0ing%EF%BC%89/" target="_self">
           2023版Nodejs知识记录（更新ing）
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20231010/2023%E7%89%88Nodejs%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95%EF%BC%88%E6%9B%B4%E6%96%B0ing%EF%BC%89/" target="_self">
@@ -425,17 +428,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20231009/2023%E7%89%88-react%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/" target="_self">
           2023版react知识记录（更新ing）
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20231009/2023%E7%89%88-react%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/" target="_self">
         <div>
-          1. 什么是JSX？JSX是JavaScript的扩展标记语言，它允许在JavaScript中嵌入HTML代码。JSX可以让你在JavaScript代码中编写类似于HTML的代码，从而使你的代码更加简洁和易读。 例如，在React库中，你可以使用JSX编写组件的HTML结构。 1&lt;h1 className&#x3D;&quot;title&quot; style&#x3D;&amp;#123;&amp;#123;color:&amp;
+          1. 什么是JSX？JSX是JavaScript的扩展标记语言，它允许在JavaScript中嵌入HTML代码。JSX可以让你在JavaScript代码中编写类似于HTML的代码，从而使你的代码更加简洁和易读。 例如，在React库中，你可以使用JSX编写组件的HTML结构。 1&lt;h1 className=&quot;title&quot; style=&#123;&#123;color:&
         </div>
       </a>
 
@@ -488,12 +491,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20230816/TypeScript%E9%80%9A%E5%85%B3%E7%A7%98%E7%B1%8D/" target="_self">
           TypeScript通关秘籍
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20230816/TypeScript%E9%80%9A%E5%85%B3%E7%A7%98%E7%B1%8D/" target="_self">
@@ -549,12 +552,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20230728/Golang%E7%AC%94%E8%AE%B0/" target="_self">
           Golang笔记
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20230728/Golang%E7%AC%94%E8%AE%B0/" target="_self">
@@ -589,12 +592,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20230420/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/" target="_self">
           前端工程化
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20230420/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/" target="_self">
@@ -652,17 +655,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20230303/Nginx%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-%E8%AE%B0%E5%BD%95/" target="_self">
           Nginx知识整理&amp;记录
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20230303/Nginx%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-%E8%AE%B0%E5%BD%95/" target="_self">
         <div>
-          Nginx是什么？Nginx (engine x) 是一个轻量级、高性能的HTTP和反向代理服务器,同时也是一个通用代理服务器(TCP&#x2F;UDP&#x2F;IMAP&#x2F;POP3&#x2F;SMTP)。  Nginx是一个拥有高性能HTTP和反向代理服务器，其特点是占用内存少，并发能力强，并且在现实中，nginx的并发能力要比在同类型的网页服务器中表现要好 Nginx专为性能优化而开发，最重要的要求便是性能，且十分注重效
+          Nginx是什么？Nginx (engine x) 是一个轻量级、高性能的HTTP和反向代理服务器,同时也是一个通用代理服务器(TCP/UDP/IMAP/POP3/SMTP)。  Nginx是一个拥有高性能HTTP和反向代理服务器，其特点是占用内存少，并发能力强，并且在现实中，nginx的并发能力要比在同类型的网页服务器中表现要好 Nginx专为性能优化而开发，最重要的要求便是性能，且十分注重效
         </div>
       </a>
 
@@ -694,17 +697,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20221106/M1%E7%89%88%E6%9C%ACMac%E7%94%B5%E8%84%91%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" target="_self">
           M1版本Mac电脑前端开发环境配置
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20221106/M1%E7%89%88%E6%9C%ACMac%E7%94%B5%E8%84%91%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" target="_self">
         <div>
-          〉Mac电脑的开发环境配置比Windows的要麻烦许多，特别是M1版本的Mac发布之后，配置方面也有些变化，对此做一些记录。 1.安装Homebrew文档地址：https:&#x2F;&#x2F;brew.sh&#x2F; 打开苹果终端，输入&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;HEAD&#x2F;instal
+          〉Mac电脑的开发环境配置比Windows的要麻烦许多，特别是M1版本的Mac发布之后，配置方面也有些变化，对此做一些记录。 1.安装Homebrew文档地址：https://brew.sh/ 打开苹果终端，输入/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/instal
         </div>
       </a>
 
@@ -734,12 +737,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20220720/%E9%A1%B5%E9%9D%A2%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E7%9A%84%E8%A6%81%E7%82%B9/" target="_self">
           页面响应式布局的要点
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20220720/%E9%A1%B5%E9%9D%A2%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E7%9A%84%E8%A6%81%E7%82%B9/" target="_self">
@@ -915,8 +918,6 @@
       
     })(window, document);
   </script>
-
-
 
 
 

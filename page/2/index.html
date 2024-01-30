@@ -63,7 +63,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zouhualu.github.io","root":"/","version":"1.9.1","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"zouhualu.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -72,6 +72,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -105,9 +107,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                主页
+                <span>主页</span>
               </a>
             </li>
           
@@ -117,9 +119,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                全部
+                <span>全部</span>
               </a>
             </li>
           
@@ -129,9 +131,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -141,9 +143,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -153,9 +155,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -165,9 +167,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -175,15 +177,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -236,12 +239,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20220715/2022%E5%B9%B4%E4%B8%AD%E6%80%BB%E7%BB%93/" target="_self">
           2022年中总结
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20220715/2022%E5%B9%B4%E4%B8%AD%E6%80%BB%E7%BB%93/" target="_self">
@@ -297,17 +300,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20220528/%E5%B8%B8%E8%A7%81%E7%9A%84%E6%89%8B%E5%86%99js/" target="_self">
           常见的手写js
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20220528/%E5%B8%B8%E8%A7%81%E7%9A%84%E6%89%8B%E5%86%99js/" target="_self">
         <div>
-          newnew 操作符  new 的原理是什么？通过 new 的方式创建对象和通过字面量创建有什么区别？  在调用new的过程中会发生四件操作  新建了一个对象 新对象链接到原型对象上 绑定 this 返回这个新对象  123456789101112function create() &amp;#123;  &#x2F;&#x2F; 1.创建一个新对象  let obj &#x3D; &amp;#123;&amp;#125;;  &#x2F;&#x2F; 获取第一个参数，
+          newnew 操作符  new 的原理是什么？通过 new 的方式创建对象和通过字面量创建有什么区别？  在调用new的过程中会发生四件操作  新建了一个对象 新对象链接到原型对象上 绑定 this 返回这个新对象  123456789101112function create() &#123;  // 1.创建一个新对象  let obj = &#123;&#125;;  // 获取第一个参数，
         </div>
       </a>
 
@@ -360,17 +363,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20220405/vue%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1/" target="_self">
           vue前端路由
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20220405/vue%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1/" target="_self">
         <div>
-          实现一个 hash 路由HTML 部分 123456789101112131415161718192021222324252627282930313233343536373839&lt;!DOCTYPE html&gt;&lt;html lang&#x3D;&quot;en&quot;&gt;  &lt;head&gt;    &lt;meta charset&#x3D;&quot;UTF-8&quot; &#x2F;&gt;
+          实现一个 hash 路由HTML 部分 123456789101112131415161718192021222324252627282930313233343536373839&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;  &lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot; /&gt;
         </div>
       </a>
 
@@ -423,17 +426,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20220329/Promise%E8%BE%93%E5%87%BA%E9%A1%BA%E5%BA%8F%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/" target="_self">
           Promise输出顺序相关问题
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20220329/Promise%E8%BE%93%E5%87%BA%E9%A1%BA%E5%BA%8F%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/" target="_self">
         <div>
-          题：1234567891011121314151617181920212223242526272829303132333435Promise.resolve()  .then(() &#x3D;&gt; &amp;#123;    console.log(0);    setTimeout(() &#x3D;&gt; &amp;#123;      console.log(&quot;宏任务&quot;);    &amp;#125;, 0
+          题：1234567891011121314151617181920212223242526272829303132333435Promise.resolve()  .then(() =&gt; &#123;    console.log(0);    setTimeout(() =&gt; &#123;      console.log(&quot;宏任务&quot;);    &#125;, 0
         </div>
       </a>
 
@@ -486,17 +489,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20220222/vue%E6%BA%90%E7%A0%81/" target="_self">
           vue源码
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20220222/vue%E6%BA%90%E7%A0%81/" target="_self">
         <div>
-          为什么data是函数，而components是对象？data函数如果没有返回值会报错吗？答：会  vue源码位置：src\core\instance\state.js  1234567891011121314151617181920function initData (vm: Component) &amp;#123;  let data &#x3D; vm.$options.data  data &#x3D; vm._da
+          为什么data是函数，而components是对象？data函数如果没有返回值会报错吗？答：会  vue源码位置：src\core\instance\state.js  1234567891011121314151617181920function initData (vm: Component) &#123;  let data = vm.$options.data  data = vm._da
         </div>
       </a>
 
@@ -549,17 +552,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20220127/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" target="_self">
           数据结构与算法
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20220127/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" target="_self">
         <div>
-          1.线性表定义 线性表是具有相同数据类型的 n(n≥0)个数据元素的有限序列。其中 n 为表长，当 n&#x3D;0 时该线性表是一个空表。  若用 L 命名线性表，则其一般表示如下： L&#x3D;(a1,a2,...ai,ai+1,...,an)  其中，a1 是唯一的“第一个”数据元素，又称为表头元素；an 是唯一的“最后一个”数据元素，又称为表尾元素。除第一个元素外，每个元素有且仅有一个直接前驱；除最后一个元
+          1.线性表定义 线性表是具有相同数据类型的 n(n≥0)个数据元素的有限序列。其中 n 为表长，当 n=0 时该线性表是一个空表。  若用 L 命名线性表，则其一般表示如下： L=(a1,a2,...ai,ai+1,...,an)  其中，a1 是唯一的“第一个”数据元素，又称为表头元素；an 是唯一的“最后一个”数据元素，又称为表尾元素。除第一个元素外，每个元素有且仅有一个直接前驱；除最后一个元
         </div>
       </a>
 
@@ -612,17 +615,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20220119/vue-router%E9%9A%8F%E7%AC%94/" target="_self">
           vue-router随笔
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20220119/vue-router%E9%9A%8F%E7%AC%94/" target="_self">
         <div>
-          编程式导航导航到不同的位置除了使用 &lt;router-link&gt; 创建 a 标签来定义导航链接，我们还可以借助 router 的实例方法，通过编写代码来实现。 在 Vue 实例中，你可以通过 $router 访问路由实例。因此你可以调用 this.$router.push。 该方法的参数可以是一个字符串路径，或者一个描述地址的对象。例如： 1234567891011121314&#x2F;&#x2F; 字符
+          编程式导航导航到不同的位置除了使用 &lt;router-link&gt; 创建 a 标签来定义导航链接，我们还可以借助 router 的实例方法，通过编写代码来实现。 在 Vue 实例中，你可以通过 $router 访问路由实例。因此你可以调用 this.$router.push。 该方法的参数可以是一个字符串路径，或者一个描述地址的对象。例如： 1234567891011121314// 字符
         </div>
       </a>
 
@@ -675,17 +678,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20220114/ES6%E9%9A%8F%E7%AC%94/" target="_self">
           ES6随笔
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20220114/ES6%E9%9A%8F%E7%AC%94/" target="_self">
         <div>
-          参考资料：阮一峰 ES6 标准入门教程第三版  本文用于记录我觉得 ES6 中重要的原理和使用技巧  class 的继承Class 可以通过 extends 关键字实现继承，这比 ES5 的通过修改原型链实现继承，要清晰和方便很多。 123456789class ColorPoint extends Point &amp;#123;  constructor(x, y, color) &amp;#123;
+          参考资料：阮一峰 ES6 标准入门教程第三版  本文用于记录我觉得 ES6 中重要的原理和使用技巧  class 的继承Class 可以通过 extends 关键字实现继承，这比 ES5 的通过修改原型链实现继承，要清晰和方便很多。 123456789class ColorPoint extends Point &#123;  constructor(x, y, color) &#123;
         </div>
       </a>
 
@@ -717,17 +720,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20211223/%E8%A3%85%E9%A5%B0%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/" target="_self">
           装饰器的使用
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20211223/%E8%A3%85%E9%A5%B0%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/" target="_self">
         <div>
-          在 create-react-app 搭建的项目中使用装饰器 执行yarn eject命令，暴露出配置项  因为装饰器是新的提案，许多浏览器和 Node 环境并不支持，所以我们需要安装插件：@babel&#x2F;plugin-proposal-decorators。使用create-react-app创建的项目自带这个插件，不过我们需要配置一下，找到package.json文件加入一下代码：   12
+          在 create-react-app 搭建的项目中使用装饰器 执行yarn eject命令，暴露出配置项  因为装饰器是新的提案，许多浏览器和 Node 环境并不支持，所以我们需要安装插件：@babel/plugin-proposal-decorators。使用create-react-app创建的项目自带这个插件，不过我们需要配置一下，找到package.json文件加入一下代码：   12
         </div>
       </a>
 
@@ -780,17 +783,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/20211218/React%E9%9A%8F%E7%AC%94/" target="_self">
           React随笔
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/20211218/React%E9%9A%8F%E7%AC%94/" target="_self">
         <div>
-          React 中的thisReact 的官方文档里写的自定义的方法都需要用 bind 方法绑定一下才能使用，否则 this 会出现指向问题，那究竟是为什么呢？ 探讨一12345678910111213141516class Person &amp;#123;    constructor(props)&amp;#123;        this.state &#x3D; &amp;#123;            ......
+          React 中的thisReact 的官方文档里写的自定义的方法都需要用 bind 方法绑定一下才能使用，否则 this 会出现指向问题，那究竟是为什么呢？ 探讨一12345678910111213141516class Person &#123;    constructor(props)&#123;        this.state = &#123;            ......
         </div>
       </a>
 
@@ -961,8 +964,6 @@
       
     })(window, document);
   </script>
-
-
 
 
 
