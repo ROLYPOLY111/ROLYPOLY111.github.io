@@ -16,27 +16,29 @@
   <meta name="author" content="花鹿">
   <meta name="keywords" content="blog,走花路的长颈鹿,博客,走花鹿，花鹿">
   
-    <meta name="description" content="前端工程化前端工程化指使用软件工程的技术与方法对前端开发的技术、工具、流程、经验、方案等指标标准化，它具备模块化、组件化、规范化、自动化四大特性，主要目的是降低成本与增加效率。 模块化模块化是前端工程化的重中之重。它在前端工程化中具体表现为：在文件层面上对代码与资源实现拆分与组装，将一个大文件拆分为互相依赖的小文件，再统一拼装与加载。 组件化组件化是前端工程化的重要基础。它实现了代码更高层次的复">
+    <meta name="description" content="包学包会！看完你也会 NEXT.JS 官方英文文档：https:&#x2F;&#x2F;nextjs.org&#x2F; 中文文档不建议看，落后太多！  1. 初始篇1.1 创建项目使用 create-next-app 脚手架 1npx create-next-app  如果你不使用 npx，也支持使用 yarn、pnpm、bunx 12345yarn create next-apppnpm create next-appb">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端工程化">
-<meta property="og:url" content="https://zouhualu.github.io/20230420/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/index.html">
+<meta property="og:title" content="NEXT.JS从入门到放弃">
+<meta property="og:url" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/index.html">
 <meta property="og:site_name" content="花鹿">
-<meta property="og:description" content="前端工程化前端工程化指使用软件工程的技术与方法对前端开发的技术、工具、流程、经验、方案等指标标准化，它具备模块化、组件化、规范化、自动化四大特性，主要目的是降低成本与增加效率。 模块化模块化是前端工程化的重中之重。它在前端工程化中具体表现为：在文件层面上对代码与资源实现拆分与组装，将一个大文件拆分为互相依赖的小文件，再统一拼装与加载。 组件化组件化是前端工程化的重要基础。它实现了代码更高层次的复">
+<meta property="og:description" content="包学包会！看完你也会 NEXT.JS 官方英文文档：https:&#x2F;&#x2F;nextjs.org&#x2F; 中文文档不建议看，落后太多！  1. 初始篇1.1 创建项目使用 create-next-app 脚手架 1npx create-next-app  如果你不使用 npx，也支持使用 yarn、pnpm、bunx 12345yarn create next-apppnpm create next-appb">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d62b9a148e14be298cad627cac1de6b~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp">
-<meta property="article:published_time" content="2023-04-20T06:30:43.000Z">
-<meta property="article:modified_time" content="2024-01-29T06:51:18.736Z">
+<meta property="og:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/image.png">
+<meta property="og:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%80.png">
+<meta property="og:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%802.png">
+<meta property="article:published_time" content="2024-01-30T06:39:50.000Z">
+<meta property="article:modified_time" content="2024-01-30T08:30:40.448Z">
 <meta property="article:author" content="花鹿">
-<meta property="article:tag" content="面试">
-<meta property="article:tag" content="前端工程化">
+<meta property="article:tag" content="React">
+<meta property="article:tag" content="Next.js">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d62b9a148e14be298cad627cac1de6b~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp">
+<meta name="twitter:image" content="https://zouhualu.github.io/20240130/NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/image.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>前端工程化 - 花鹿</title>
+  <title>NEXT.JS从入门到放弃 - 花鹿</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -211,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="前端工程化"></span>
+            <span id="subtitle" data-typed-text="NEXT.JS从入门到放弃"></span>
           
         </div>
 
@@ -227,8 +229,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-04-20 14:30" pubdate>
-          2023年4月20日 下午
+        <time datetime="2024-01-30 14:39" pubdate>
+          2024年1月30日 下午
         </time>
       </span>
     
@@ -240,7 +242,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1k 字
+          2.6k 字
         
       </span>
     
@@ -252,7 +254,7 @@
         
         
           <!-- compatible with older versions-->
-          9 分钟
+          22 分钟
         
       </span>
     
@@ -302,66 +304,61 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">前端工程化</h1>
+            <h1 style="display: none">NEXT.JS从入门到放弃</h1>
             
             <div class="markdown-body">
               
-              <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d62b9a148e14be298cad627cac1de6b~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" srcset="/img/loading.gif" lazyload alt="前端工程化"></p>
-<h2 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h2><p><code>前端工程化</code>指使用软件工程的技术与方法对前端开发的技术、工具、流程、经验、方案等指标标准化，<br>它具备<strong>模块化、组件化、规范化、自动化</strong>四大特性，<br>主要目的是<strong>降低成本</strong>与<strong>增加效率</strong>。</p>
-<h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><p><code>模块化</code>是前端工程化的重中之重。它在前端工程化中具体表现为：在文件层面上对代码与资源实现拆分与组装，将一个大文件拆分为互相依赖的小文件，再统一拼装与加载。</p>
-<h3 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h3><p><code>组件化</code>是前端工程化的重要基础。它实现了代码更高层次的复用性，提升开发效率。组件的封装也是对象的封装，同样要做到**高内聚低耦合<br>**，组件化的项目不仅利于单元测试的进行，同样也利于需求迭代的推进。</p>
-<p>优秀的组件化遵循以下设计哲学。</p>
+              <blockquote>
+<p>包学包会！看完你也会</p>
+<p>NEXT.JS 官方英文文档：<a target="_blank" rel="noopener" href="https://nextjs.org/">https://nextjs.org/</a></p>
+<p>中文文档不建议看，落后太多！</p>
+</blockquote>
+<h1 id="1-初始篇"><a href="#1-初始篇" class="headerlink" title="1. 初始篇"></a>1. 初始篇</h1><h3 id="1-1-创建项目"><a href="#1-1-创建项目" class="headerlink" title="1.1 创建项目"></a>1.1 创建项目</h3><p>使用 create-next-app 脚手架</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs node">npx create-next-app<br></code></pre></td></tr></table></figure>
+
+<p>如果你不使用 npx，也支持使用 yarn、pnpm、bunx</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs node">yarn create next-app<br><br>pnpm create next-app<br><br>bunx create-next-app<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-2-运行项目"><a href="#1-2-运行项目" class="headerlink" title="1.2 运行项目"></a>1.2 运行项目</h3><p>查看项目根目录 package.json 文件的代码：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-string">&quot;scripts&quot;</span>: &#123;<br>    <span class="hljs-attr">&quot;dev&quot;</span>: <span class="hljs-string">&quot;next dev&quot;</span>,<br>    <span class="hljs-attr">&quot;build&quot;</span>: <span class="hljs-string">&quot;next build&quot;</span>,<br>    <span class="hljs-attr">&quot;start&quot;</span>: <span class="hljs-string">&quot;next start&quot;</span>,<br>    <span class="hljs-attr">&quot;lint&quot;</span>: <span class="hljs-string">&quot;next lint&quot;</span><br>  &#125;<br></code></pre></td></tr></table></figure>
+
+<p>开发的时候使用 <code>npm run dev</code>。部署的时候先使用 <code>npm run build</code>构建生产代码，再执行 <code>npm run start</code>运行生产项目。运行 <code>npm run lint</code>则会执行 <code>ESLint</code> 语法检查。</p>
+<h1 id="2-路由篇"><a href="#2-路由篇" class="headerlink" title="2. 路由篇"></a>2. 路由篇</h1><p>Next.js 目前有两套路由解决方案，之前的方案称之为“Pages Router”，目前的方案称之为“App Router”，两套方案是兼容的，都可以在 Next.js 中使用。</p>
+<p>目前，我们主要学习“App Router”。</p>
+<h2 id="1-文件系统"><a href="#1-文件系统" class="headerlink" title="1. 文件系统"></a>1. 文件系统</h2><p>Next.js 的路由基于的是文件系统，也就是说，一个文件就可以是一个路由。举个例子，你在 app/pages 目录下创建一个 index.js 文件，它会直接映射到 / 路由地址；在 app/pages 目录下创建一个 about.js 文件，它会直接映射到 /about 路由地址。</p>
+<h2 id="2-App-Router"><a href="#2-App-Router" class="headerlink" title="2. App Router"></a>2. App Router</h2><h3 id="2-1-定义路由"><a href="#2-1-定义路由" class="headerlink" title="2.1 定义路由"></a>2.1 定义路由</h3><p>文件夹被用来定义路由。</p>
+<p><code>app/dashboard/settings</code>目录对应的路由地址就是 <code>/dashboard/settings</code></p>
+<h3 id="2-2-定义页面（Pages）"><a href="#2-2-定义页面（Pages）" class="headerlink" title="2.2 定义页面（Pages）"></a>2.2 定义页面（Pages）</h3><p>你需要创建一个特殊的名为 <code>page.js</code> 的文件，这是一种约定和规范</p>
+<p><img src="./2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/image.png" srcset="/img/loading.gif" lazyload alt="目录结构"></p>
+<p>在上图这个例子中:</p>
 <ul>
-<li>将设计图划分为最小组件层级</li>
-<li>使用预设规范创建组件静态版本</li>
-<li>确定组件内部最小且完整的状态的表示方式</li>
-<li>确定组件内部最小且完整的状态的存放方式</li>
-<li>实现数据流的正向传递与反向传递</li>
+<li>app/page.js 对应路由 /</li>
+<li>app/dashboard/page.js 对应路由 /dashboard</li>
+<li>app/dashboard/settings/page.js 对应路由/dashboard/settings</li>
+<li>analytics 目录下因为没有 page.js 文件，所以没有对应的路由。这个文件可以被用于存放组件、样式表、图片或者其他文件。</li>
 </ul>
-<h3 id="规范化"><a href="#规范化" class="headerlink" title="规范化"></a>规范化</h3><p><code>规范化</code>指将一系列预设规范接入工程各个阶段，通过各项指标标准化开发者的工作流程，引导开发者在团队协作中往更好的方向发展。</p>
-<p><code>规范化</code><br>是前端工程化的重要部分。它有效地将一盘松散的规范通过指定标准凝聚在一起，将所有工作流程标准化，协同所有开发者以标准化的方式定义工作流程，同时也影响着代码、文档和日志，甚至影响着每个开发者及其团队发展方向，因此每个成熟的前端团队都有一套身经百战的规范化方案。</p>
-<p><code>规范化</code>更多应用在团队协作中，为每个开发者指明一个方向，引领着成员往该方向走。若团队无规范化，每个开发者各做各的事情，在合并代码时肯定会发生争吵，甚至影响工作效率。</p>
-<h3 id="自动化"><a href="#自动化" class="headerlink" title="自动化"></a>自动化</h3><p><code>自动化</code>指将一系列繁琐重复的工作流程交由程序根据预设脚本自动处理，整个工作流程无需人工参与，以解放开发者双手让其更专注业务需求的开发。</p>
-<p><code>自动化</code><br>是前端工程化的智能部分。它既可解放双手又能节省大量时间做更多有意义的事情，常见自动化场景包括但不限于<code>自动化构建</code>、<code>自动化测试</code>、<code>自动化打包</code>、<code>自动化发布</code><br>和<code>自动化部署</code>，更高级的自动化场景包括但不限于<code>持续集成</code>、<code>持续交付</code>和<code>持续部署</code><br>。以自动化构建为例，又可将其划分为以下子任务，这些子任务分布在自动化构建不同阶段，在不同阶段的最佳时刻会调用相关工具处理相关流程。</p>
-<table>
-<thead>
-<tr>
-<th>任务</th>
-<th>职责</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Stylelint</td>
-<td>校验样式代码</td>
-</tr>
-<tr>
-<td>Eslint</td>
-<td>校验脚本代码</td>
-</tr>
-<tr>
-<td>Postcss</td>
-<td>Postcss → CSS</td>
-</tr>
-<tr>
-<td>Sass</td>
-<td>SASS → CSS</td>
-</tr>
-<tr>
-<td>Less</td>
-<td>LESS → CSS</td>
-</tr>
-<tr>
-<td>Babel</td>
-<td>ES6 → ES5</td>
-</tr>
-<tr>
-<td>TypeScript</td>
-<td>TS → JS</td>
-</tr>
-</tbody></table>
-<hr>
-<p>20240129更新</p>
-<h3 id="工程化的表现"><a href="#工程化的表现" class="headerlink" title="工程化的表现"></a>工程化的表现</h3><p>一切以提高效率、降低成本、质量保证为目的的手段都属于<strong>工程化</strong></p>
+<p>page.js 的代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// app/page.js</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Page</span>(<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, Next.js!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-3-定义布局（Layouts）"><a href="#2-3-定义布局（Layouts）" class="headerlink" title="2.3 定义布局（Layouts）"></a>2.3 定义布局（Layouts）</h3><p>布局是指<strong>多个页面共享的 UI。在导航的时候，布局会保留状态，保持可交互性并且不会重新渲染</strong>，比如用来实现后台管理系统的侧边导航栏。</p>
+<p>定义一个布局，你需要新建一个名为 <code>layout.js</code>的文件，该文件默认导出一个 React 组件，该组件应接收一个 <code>children</code> prop，<code>chidren</code> 表示子布局（如果有的话）或者子页面。</p>
+<p><img src="./2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%80.png" srcset="/img/loading.gif" lazyload alt="目录结构"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// app/dashboard/layout.js</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">DashboardLayout</span>(<span class="hljs-params">&#123;</span></span><br><span class="hljs-params"><span class="hljs-function">  children,</span></span><br><span class="hljs-params"><span class="hljs-function">&#125;</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span></span><br><span class="xml">      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>nav<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></span><br><span class="xml">      &#123;children&#125;</span><br><span class="xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span><br>  )<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// app/dashboard/page.js</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Page</span>(<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, Dashboard!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="./2024-01-30-NEXT-JS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%802.png" srcset="/img/loading.gif" lazyload alt="显示"></p>
+<p>你可以发现：同一文件夹下如果有 layout.js 和 page.js，page 会作为 children 参数传入 layout。换句话说，layout 会包裹同层级的 page。</p>
+<h4 id="根布局（Root-Layout）"><a href="#根布局（Root-Layout）" class="headerlink" title="根布局（Root Layout）"></a>根布局（Root Layout）</h4><p>布局支持嵌套，最顶层的布局我们称之为根布局（Root Layout），也就是 <code>app/layout.js</code>。它会应用于所有的路由。除此之外，这个布局还有点特殊。</p>
+<p>使用 <code>create-next-app</code> 默认创建的 <code>layout.js</code> 代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// app/layout.js</span><br><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;./globals.css&#x27;</span><br><span class="hljs-keyword">import</span> &#123; Inter &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/font/google&#x27;</span><br><br><span class="hljs-keyword">const</span> inter = Inter(&#123; <span class="hljs-attr">subsets</span>: [<span class="hljs-string">&#x27;latin&#x27;</span>] &#125;)<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> metadata = &#123;<br>  <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;Create Next App&#x27;</span>,<br>  <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;Generated by create next app&#x27;</span>,<br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">RootLayout</span>(<span class="hljs-params">&#123; children &#125;</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span></span><br><span class="xml">      <span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#123;inter.className&#125;</span>&gt;</span>&#123;children&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br>  )<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<ul>
+<li>app 目录必须包含根布局，也就是 app/layout.js 这个文件是必需的。</li>
+<li>根布局必须包含 html 和 body标签，其他布局不能包含这些标签。但如果你要更改这些标签，不推荐直接修改，Next.js 提供内置工具帮助你管理诸如 <code>&lt;title /&gt;</code> 这样的 HTML 元素。</li>
+<li>你可以使用路由组创建多个根布局。</li>
+<li>默认根布局是服务端组件，且不能设置为客户端组件。</li>
+</ul>
+<h3 id="2-4-定义模板（Templates）"><a href="#2-4-定义模板（Templates）" class="headerlink" title="2.4 定义模板（Templates）"></a>2.4 定义模板（Templates）</h3><p>模板类似于布局，它也会传入每个子布局或者页面。但不会像布局那样维持状态。</p>
 
               
             </div>
@@ -379,7 +376,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB-%E5%89%8D%E7%AB%AF/" class="category-chain-item">技术类-前端</a>
+  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
   
   
 
@@ -394,9 +391,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%9D%A2%E8%AF%95/">#面试</a>
+        <a href="/tags/React/">#React</a>
       
-        <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/">#前端工程化</a>
+        <a href="/tags/Next-js/">#Next.js</a>
       
     </div>
   
@@ -408,8 +405,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>前端工程化</div>
-      <div>https://zouhualu.github.io/20230420/前端工程化/</div>
+      <div>NEXT.JS从入门到放弃</div>
+      <div>https://zouhualu.github.io/20240130/NEXT-JS从入门到放弃/</div>
     </div>
     <div class="license-meta">
       
@@ -421,7 +418,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年4月20日</div>
+          <div>2024年1月30日</div>
         </div>
       
       
@@ -451,18 +448,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/20230728/Golang%E7%AC%94%E8%AE%B0/" title="Golang笔记">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Golang笔记</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/20230303/Nginx%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-%E8%AE%B0%E5%BD%95/" title="Nginx知识整理&amp;记录">
-                        <span class="hidden-mobile">Nginx知识整理&amp;记录</span>
+                      <a href="/20231010/2023%E7%89%88Nodejs%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95%EF%BC%88%E6%9B%B4%E6%96%B0ing%EF%BC%89/" title="2023版Nodejs知识记录（更新ing）">
+                        <span class="hidden-mobile">2023版Nodejs知识记录（更新ing）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
